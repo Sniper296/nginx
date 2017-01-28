@@ -116,9 +116,9 @@ static char ngx_http_error_403_page[] =
 
 static char ngx_http_error_404_page[] =
 "<html>" CRLF
-"<head><title>404 Not Found</title></head>" CRLF
+"<head><title>404 Rage Quit</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>404 Not Found</h1></center>" CRLF
+"<center><h1>404 Rage quit. It looks like somebody has rage quit and requested the file/image/topic/profile you are looking for to be deleted.</h1></center>" CRLF
 ;
 
 
@@ -156,9 +156,9 @@ static char ngx_http_error_409_page[] =
 
 static char ngx_http_error_410_page[] =
 "<html>" CRLF
-"<head><title>410 Gone</title></head>" CRLF
+"<head><title>410 Rage Quit</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>410 Gone</h1></center>" CRLF
+"<center><h1>410 Rage quit. It looks like somebody has rage quit and requested the file/image/topic/profile you are looking for to be deleted.</h1></center>" CRLF
 ;
 
 
@@ -210,11 +210,27 @@ static char ngx_http_error_416_page[] =
 ;
 
 
+static char ngx_http_error_418_page[] =
+"<html>" CRLF
+"<head><title>418 I'm a Squid</title></head>" CRLF
+"<body bgcolor=\"white\">" CRLF
+"<center><h1>418 I'm a Squid. I break the site.</h1></center>" CRLF
+;
+
+
 static char ngx_http_error_421_page[] =
 "<html>" CRLF
 "<head><title>421 Misdirected Request</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
 "<center><h1>421 Misdirected Request</h1></center>" CRLF
+;
+
+
+static char ngx_http_error_451_page[] =
+"<html>" CRLF
+"<head><title>451 Yeah, Right!</title></head>" CRLF
+"<body bgcolor=\"white\">" CRLF
+"<center><h1>451 Reserved for when someone who is <em>actually</em> a cop, knows someone at Rockstar or has a real lawyer threatens us with legal action.</h1></center>" CRLF
 ;
 
 
@@ -260,9 +276,9 @@ CRLF
 
 static char ngx_http_error_500_page[] =
 "<html>" CRLF
-"<head><title>500 Internal Server Error</title></head>" CRLF
+"<head><title>500 It's Dead, Cyan</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>500 Internal Server Error</h1></center>" CRLF
+"<center><h1>500 It's Dead, Cyan. “Somebody” dropped pizza in the server… again.</h1></center>" CRLF
 ;
 
 
@@ -276,33 +292,33 @@ static char ngx_http_error_501_page[] =
 
 static char ngx_http_error_502_page[] =
 "<html>" CRLF
-"<head><title>502 Bad Gateway</title></head>" CRLF
+"<head><title>502 Doing an LCPDFR.com</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>502 Bad Gateway</h1></center>" CRLF
+"<center><h1>502 Doing an LCPDFR.com</h1></center>" CRLF
 ;
 
 
 static char ngx_http_error_503_page[] =
 "<html>" CRLF
-"<head><title>503 Service Temporarily Unavailable</title></head>" CRLF
+"<head><title>503 Ayy, LMAO</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>503 Service Temporarily Unavailable</h1></center>" CRLF
+"<center><h1>503 Ayy, LMAO.</h1></center>" CRLF
 ;
 
 
 static char ngx_http_error_504_page[] =
 "<html>" CRLF
-"<head><title>504 Gateway Time-out</title></head>" CRLF
+"<head><title>504 SLOWLY doing an LCPDFR.com</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>504 Gateway Time-out</h1></center>" CRLF
+"<center><h1>504 <em>Slowly</em> Doing an LCPDFR.com.</h1></center>" CRLF
 ;
 
 
 static char ngx_http_error_507_page[] =
 "<html>" CRLF
-"<head><title>507 Insufficient Storage</title></head>" CRLF
+"<head><title>507 Somebody Uploaded Porn to the Gallery</title></head>" CRLF
 "<body bgcolor=\"white\">" CRLF
-"<center><h1>507 Insufficient Storage</h1></center>" CRLF
+"<center><h1>507 Somebody uploaded porn to the gallery… again.</h1></center>" CRLF
 ;
 
 
@@ -343,12 +359,42 @@ static ngx_str_t ngx_http_error_pages[] = {
     ngx_string(ngx_http_error_415_page),
     ngx_string(ngx_http_error_416_page),
     ngx_null_string,                     /* 417 */
-    ngx_null_string,                     /* 418 */
+    ngx_string(ngx_http_error_418_page),
     ngx_null_string,                     /* 419 */
     ngx_null_string,                     /* 420 */
     ngx_string(ngx_http_error_421_page),
+    ngx_null_string,                     /* 422 */
+    ngx_null_string,                     /* 423 */
+    ngx_null_string,                     /* 424 */
+    ngx_null_string,                     /* 425 */
+    ngx_null_string,                     /* 426 */
+    ngx_null_string,                     /* 427 */
+    ngx_null_string,                     /* 428 */
+    ngx_null_string,                     /* 429 */
+    ngx_null_string,                     /* 430 */
+    ngx_null_string,                     /* 431 */
+    ngx_null_string,                     /* 432 */
+    ngx_null_string,                     /* 433 */
+    ngx_null_string,                     /* 434 */
+    ngx_null_string,                     /* 435 */
+    ngx_null_string,                     /* 436 */
+    ngx_null_string,                     /* 437 */
+    ngx_null_string,                     /* 438 */
+    ngx_null_string,                     /* 439 */
+    ngx_null_string,                     /* 440 */
+    ngx_null_string,                     /* 441 */
+    ngx_null_string,                     /* 442 */
+    ngx_null_string,                     /* 443 */
+    ngx_null_string,                     /* 444 */
+    ngx_null_string,                     /* 445 */
+    ngx_null_string,                     /* 446 */
+    ngx_null_string,                     /* 447 */
+    ngx_null_string,                     /* 448 */
+    ngx_null_string,                     /* 449 */
+    ngx_null_string,                     /* 450 */
+    ngx_string(ngx_http_error_451_page),
 
-#define NGX_HTTP_LAST_4XX  422
+#define NGX_HTTP_LAST_4XX  451
 #define NGX_HTTP_OFF_5XX   (NGX_HTTP_LAST_4XX - 400 + NGX_HTTP_OFF_4XX)
 
     ngx_string(ngx_http_error_494_page), /* 494, request header too large */
